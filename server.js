@@ -6,7 +6,9 @@ const PORT = process.env.PORT || 5000;
 const mainRouter=require('./routes/index');
 const productRouter=require('./routes/products');
 
-app.use(express.static('public'))
+app.use(express.static('public'));
+app.use(express.json());
+
 
 app.set('view engine','ejs');
 //console.log(app.get('view engine'));
